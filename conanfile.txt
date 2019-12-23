@@ -1,0 +1,12 @@
+[requires]
+boost/1.70.0@conan/stable
+opencv/4.1.1@conan/stable
+glm/0.9.9.5@g-truc/stable
+
+[generators]
+cmake
+
+[options]
+opencv:eigen=True
+opencv:gtk=3
+opencv:ffmpeg=True
