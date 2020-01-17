@@ -1,9 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include <thread>
 
-#include <opencv4/opencv2/core.hpp>
-#include <opencv4/opencv2/imgcodecs.hpp>
-#include <opencv4/opencv2/highgui.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/highgui.hpp>
 
 int g_slider_position = 0;
 
@@ -24,7 +25,7 @@ void on_trackbar_slide(int pos, void*)
 
 int main(int argc, char** argv)
 {
-    std::string video_name = argv[1];
+    std::string video_name = std::string(argv[1]);
     cv::namedWindow("lena", cv::WINDOW_AUTOSIZE);
     g_video_capture.open(video_name);
 
@@ -51,10 +52,6 @@ int main(int argc, char** argv)
             cv::setTrackbarPos("position", "lena", current_pos);
             cv::imshow("lena", frame);
 
-
-
-            
-
             g_run = 1;
         }
 
@@ -73,6 +70,7 @@ int main(int argc, char** argv)
         {
             break;            
         }
+        std::this_thread::sleep_for(std::chrono::milliseconds(500));
     }
 
     return 0;
