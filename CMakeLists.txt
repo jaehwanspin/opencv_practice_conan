@@ -13,5 +13,6 @@ conan_cmake_run(CONANFILE conanfile.txt
                 BASIC_SETUP
                 BUILD missing)
 
-include_directories( include )
+include_directories( ${CONAN_INCLUDE_DIRS} )
+
 add_subdirectory ( src )
