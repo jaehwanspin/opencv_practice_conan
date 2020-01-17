@@ -7,14 +7,4 @@ opencv/4.1.1@conan/stable
 cmake
 
 [options]
-[requires]
-zlib/1.2.11@conan/stable
-boost/1.71.0@conan/stable
-opencv/4.1.1@conan/stable
-
-[generators]
-cmake
-
-[options]
 opencv:eigen=True
-
