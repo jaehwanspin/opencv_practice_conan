@@ -5,12 +5,9 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/ocl.hpp>
 
-#include "utils.hpp"
-
 int main(int argc, char** argv)
 {
     std::cout << "program starts" << std::endl;
-    if (!fucking::setGPU()) return -1;
 
     std::string img_name = argv[1];
 
