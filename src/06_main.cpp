@@ -4,12 +4,10 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/ocl.hpp>
 
-#include "utils.hpp"
 
 int main(int argc, char** argv)
 {
     std::cout << "program starts" << std::endl;
-    if (!fucking::setGPU()) return -1;
     cv::Mat lena = cv::imread(argv[1], cv::IMREAD_COLOR);
 
     // create a matrix for split
