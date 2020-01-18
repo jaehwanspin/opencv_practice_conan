@@ -5,8 +5,6 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/ocl.hpp>
 
-#include "utils.hpp"
-
 #define ONCE 0
 
 void example(const cv::UMat& image)
@@ -45,7 +43,6 @@ void example(const cv::UMat& image)
 
 int main(int argc, char** argv)
 {
-    if (!fucking::setGPU()) return -1;
     std::string img_name = argv[1];
     cv::UMat in = cv::imread(img_name, -1).getUMat(cv::ACCESS_RW, cv::USAGE_DEFAULT);
 
