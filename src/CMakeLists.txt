@@ -58,3 +58,17 @@ add_executable(07_pg
 target_link_libraries(07_pg ${CONAN_LIBS})
 target_link_libraries(07_pg ${OpenCL_LIBRARY})
 target_link_libraries(07_pg ${OPENGL_gl_LIBRARY})
+
+add_executable(08_pg
+    08_main.cpp
+)
+target_link_libraries(08_pg ${CONAN_LIBS})
+target_link_libraries(08_pg ${OpenCL_LIBRARY})
+target_link_libraries(08_pg ${OPENGL_gl_LIBRARY})
+
+add_executable(09_pg
+    09_main.cpp
+)
+target_link_libraries(09_pg ${CONAN_LIBS})
+target_link_libraries(09_pg ${OpenCL_LIBRARY})
+target_link_libraries(09_pg ${OPENGL_gl_LIBRARY})
