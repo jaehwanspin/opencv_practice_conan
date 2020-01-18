@@ -4,13 +4,8 @@
 #include <opencv2/opencv.hpp>
 #include <opencv2/core/ocl.hpp>
 
-#include "utils.hpp"
-
-
 int main(int argc, char** argv)
 {
-	if (!fucking::setGPU()) return -1;
-
     cv::ocl::setUseOpenCL(true);
 
     std::string video_path = argv[1];
