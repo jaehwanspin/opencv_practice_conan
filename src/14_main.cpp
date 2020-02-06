@@ -170,7 +170,7 @@ int main(int argc, char* argv[])
     else //by default use camera
     {
         //open camera
-        cap.open(vm["video"].as<std::string>());
+        cap.open(vm["video"].as<int>());
         // read first frame
         cap >> cv_mat;
         if (!cv_mat.data) {
