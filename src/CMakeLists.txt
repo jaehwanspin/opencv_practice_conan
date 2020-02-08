@@ -107,3 +107,10 @@ add_executable(14_pg
 target_link_libraries(14_pg ${CONAN_LIBS})
 target_link_libraries(14_pg ${OpenCL_LIBRARY})
 target_link_libraries(14_pg ${OPENGL_gl_LIBRARY})
+
+add_executable(15_pg
+    15_main.cpp
+)
+target_link_libraries(15_pg ${CONAN_LIBS})
+target_link_libraries(15_pg ${OpenCL_LIBRARY})
+target_link_libraries(15_pg ${OPENGL_gl_LIBRARY})
