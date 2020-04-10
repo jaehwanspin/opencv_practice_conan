@@ -17,12 +17,12 @@ int main(int argc, char** argv)
     cv::namedWindow("lena", cv::WINDOW_AUTOSIZE);
     cv::VideoCapture video_capture;
     cv::VideoWriter video_writer;
-    if (!video_capture.open(video_path.c_str(), cv::VideoCaptureAPIs::CAP_IMAGES))
+    if (!video_capture.open(video_path.c_str(), cv::VideoCaptureAPIs::CAP_FFMPEG))
         std::cout << "fuck" << std::endl;
     // video_capture.set(cv::CAP_PROP_FPS, 60.0);
     int video_capture_width = video_capture.get(3);
     int video_capture_height = video_capture.get(4);
-    video_writer.open(std::string("./out.avi"), cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+    video_writer.open(std::string("./out.avi"), cv::VideoWriter::fourcc('D', 'I', 'V', 'X'),
         15, cv::Size(video_capture_width, video_capture_height));
     video_writer.set(cv::VIDEOWRITER_PROP_QUALITY, 100);
     double blur_size = 5.0;
